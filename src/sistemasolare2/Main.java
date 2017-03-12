@@ -5,6 +5,7 @@
  */
 package sistemasolare2;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -13,8 +14,8 @@ import java.util.Scanner;
  */
 public class Main {
 
-    public static void main(String[] args) {
-        pianeta planet = new pianeta();
+    public static void main(String[] args) throws FileNotFoundException {
+        pianeta Terra = new pianeta();
         enciclopedia treccani = new enciclopedia();
 
         System.out.println("PROGETTO SISTEMA SOLARE\n Benvenuto in questo viaggio interstellare\n"
@@ -22,28 +23,26 @@ public class Main {
                 + "Ed ad ampliare le tue conoscenze su ciò che ci circonda?\n"
                 + "Bene! Iniziamo, Ora ti trovi ancora sul tuo pianeta, la Terra\n"
                 + "Per cominciare una nuova avventura rispondi ad alcune semplici domande sulla Terra \n");
-        indiceDomande arr = new indiceDomande();
+        Domanda d;
+        /*indiceDomande arr = new indiceDomande();
         Domanda d = new Domanda("C'è vita sulla Terra?", "Si", "No", "Gli scienziati non ne sono sicuri", "Solo in alcuni periodi dell'anno");
         arr.aggiungiDomanda(d);
-        planet.setNome("Terra");
         d = new Domanda("Qual'è la VERA forma della Terra?", "Geoide", "Sfera", "Palla", "Cubo");
         arr.aggiungiDomanda(d);
-        planet.setForma("Geoide");
         d = new Domanda("Quanto tempo impiega la Terra per compiere un giro attorno a se stessa?", "24 Ore", "365 Giorni", "24 Mesi", "12 Ore");
         arr.aggiungiDomanda(d);
-        planet.setSelfRotazione(24);
         d = new Domanda("Quanto tempo impiega la Terra per compiere un giro attorno al Sole?", "365 Giorni", "24 Ore", "24 Mesi", "12 Ore");
         arr.aggiungiDomanda(d);
-        planet.setSoleRotazione(365);
         d = new Domanda("Quanti satelliti naturali ha la Terra", "1", "0", "2", "7");
         arr.aggiungiDomanda(d);
         d = new Domanda("Come si chiama?", "Luna", "Sole", "Mercurio", "Terra2");
-        arr.aggiungiDomanda(d);
-        planet.setSatellite("Luna");
-        /*for (int i = 0; i < arr.length(); i++) {
-            arr.getDomanda(i).runDomanda();
-        }*/
-        treccani.assegnaPianeta(planet);
+        arr.aggiungiDomanda(d);*/
+        for (int i = 0; i < Terra.getLista().length(); i++) {
+            Terra.getLista().getDomanda(i).runDomanda();                
+        }
+        Terra.setNome("Terra");
+        Terra.setSatellite(Terra.getLista().getDomanda(Terra.getLista().length()-1).getRispostaVera());
+        treccani.assegnaPianeta(Terra);
         System.out.println(treccani.toString());
 //        System.out.println("Eccellente, ricordati che tutto ciò che impari ti servirà in futuro,\n"
 //                + "Ecco a te un diario di viaggio in cui annotarti quel che sai e che scoprirai di ogni pianeta\n"
@@ -56,9 +55,9 @@ public class Main {
 //                + "5. Ha un solo satellite di nome LUNA\n");
 
         System.out.println("Sbloccati nuovi dati nel formulario\nMassa Terra = 5,9726 × 10^24 kg,\nVolume Terra = 1,08321 × 10^21 m³,\nAccelerazione di gravità terrestre = 9,8 m/s \n \nSbloccata Luna");
-        planet.setForzaDiGravita("9.8");
-        planet.setMassa("5,9726 * 10^24");
-        planet.setDimensione("1,08321 * 10^21");
+        Terra.setForzaDiGravita("9.8");
+        Terra.setMassa("5,9726 * 10^24");
+        Terra.setDimensione("1,08321 * 10^21");
         System.out.println("Vuoi andare sulla luna?\n1.Si\n2.No");
         String k;
         Scanner keyboard = new Scanner(System.in);
@@ -87,10 +86,12 @@ public class Main {
                 do{
                     if(k.equals("help"))
                         System.out.println(treccani.toString());
-                    if(!k.equals(""))
+                    else if(k.equals("risp"))
+                        System.out.println("746575");
+                    else if(!k.equals(""))
                         System.out.println("Sbaglaito riprova :(");
                     else
-                        System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^18)\nSe non ti ricordi i dati scoperti fino ad ora digita help");
+                        System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^18)\nPer guardare l'enciclopedia digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("746575"));
                 break;
@@ -98,10 +99,12 @@ public class Main {
                 do{
                     if(k.equals("help"))
                         System.out.println(treccani.toString());
-                    if(!k.equals(""))
+                    else if(k.equals("risp"))
+                        System.out.println("2708025");
+                    else if(!k.equals(""))
                         System.out.println("Sbaglaito riprova :(");
                     else
-                        System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^11)\nSe non ti ricordi i dati scoperti fino ad ora digita help");
+                        System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^11)\nPer guardare l'enciclopedia digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("2708025"));
                 break;
@@ -109,10 +112,12 @@ public class Main {
                 do{
                     if(k.equals("help"))
                         System.out.println(treccani.toString());
-                    if(!k.equals(""))
+                    else if(k.equals("risp"))
+                        System.out.println("16");
+                    else if(!k.equals(""))
                         System.out.println("Sbaglaito riprova :(");
                     else
-                        System.out.println("Quanto vale? (sapendo che il numero sarà diviso per 10)\nSe non ti ricordi i dati scoperti fino ad ora digita help");
+                        System.out.println("Quanto vale? (sapendo che il numero sarà diviso per 10)\nPer guardare l'enciclopedia digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("16"));
                 break;
