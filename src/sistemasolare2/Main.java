@@ -40,9 +40,9 @@ public class Main {
         d = new Domanda("Come si chiama?", "Luna", "Sole", "Mercurio", "Terra2");
         arr.aggiungiDomanda(d);
         planet.setSatellite("Luna");
-        for (int i = 0; i < arr.length(); i++) {
+        /*for (int i = 0; i < arr.length(); i++) {
             arr.getDomanda(i).runDomanda();
-        }
+        }*/
         treccani.assegnaPianeta(planet);
         System.out.println(treccani.toString());
 //        System.out.println("Eccellente, ricordati che tutto ciò che impari ti servirà in futuro,\n"
@@ -56,9 +56,9 @@ public class Main {
 //                + "5. Ha un solo satellite di nome LUNA\n");
 
         System.out.println("Sbloccati nuovi dati nel formulario\nMassa Terra = 5,9726 × 10^24 kg,\nVolume Terra = 1,08321 × 10^21 m³,\nAccelerazione di gravità terrestre = 9,8 m/s \n \nSbloccata Luna");
-        planet.setForzaDiGravita(9.8);
-        planet.setMassa(5.9726 * 1024);
-        planet.setDimensione(1.08321 * 1021);
+        planet.setForzaDiGravita("9.8");
+        planet.setMassa("5,9726 * 10^24");
+        planet.setDimensione("1,08321 * 10^21");
         System.out.println("Vuoi andare sulla luna?\n1.Si\n2.No");
         String k;
         Scanner keyboard = new Scanner(System.in);
@@ -85,28 +85,34 @@ public class Main {
             switch(i){
             case 0:
                 do{
+                    if(k.equals("help"))
+                        System.out.println(treccani.toString());
                     if(!k.equals(""))
                         System.out.println("Sbaglaito riprova :(");
                     else
-                        System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^18)");
+                        System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^18)\nSe non ti ricordi i dati scoperti fino ad ora digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("746575"));
                 break;
             case 1:
                 do{
+                    if(k.equals("help"))
+                        System.out.println(treccani.toString());
                     if(!k.equals(""))
                         System.out.println("Sbaglaito riprova :(");
                     else
-                        System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^11)");
+                        System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^11)\nSe non ti ricordi i dati scoperti fino ad ora digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("2708025"));
                 break;
             case 2:
                 do{
+                    if(k.equals("help"))
+                        System.out.println(treccani.toString());
                     if(!k.equals(""))
                         System.out.println("Sbaglaito riprova :(");
                     else
-                        System.out.println("Quanto vale? (sapendo che il numero sarà diviso per 10)");
+                        System.out.println("Quanto vale? (sapendo che il numero sarà diviso per 10)\nSe non ti ricordi i dati scoperti fino ad ora digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("16"));
                 break;

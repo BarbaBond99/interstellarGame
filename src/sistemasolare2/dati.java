@@ -11,13 +11,13 @@ package sistemasolare2;
  */
 public class dati {
     private String nome;
-    private double dimensione;
-    private double disanzaDalSole;
+    private String dimensione;
+    private String disanzaDalSole;
     private String tipo;
-    private double massa;
-    private double forzaDiGravita;
+    private String massa;
+    private String forzaDiGravita;
     private String satellite;
-    private double distSatellite;
+    private String distSatellite;
     private String forma;
     private int selfRotazione;
     private int soleRotazione;
@@ -38,19 +38,19 @@ public class dati {
         this.nome = nome;
     }
 
-    public double getDimensione() {
+    public String getDimensione() {
         return dimensione;
     }
 
-    public void setDimensione(double dimensione) {
+    public void setDimensione(String dimensione) {
         this.dimensione = dimensione;
     }
 
-    public double getDisanzaDalSole() {
+    public String getDisanzaDalSole() {
         return disanzaDalSole;
     }
 
-    public void setDisanzaDalSole(double disanzaDalSole) {
+    public void setDisanzaDalSole(String disanzaDalSole) {
         this.disanzaDalSole = disanzaDalSole;
     }
 
@@ -63,19 +63,19 @@ public class dati {
     }
 
     
-    public double getMassa() {
+    public String getMassa() {
         return massa;
     }
 
-    public void setMassa(double massa) {
+    public void setMassa(String massa) {
         this.massa = massa;
     }
 
-    public double getForzaDiGravita() {
+    public String getForzaDiGravita() {
         return forzaDiGravita;
     }
 
-    public void setForzaDiGravita(double forzaDiGravita) {
+    public void setForzaDiGravita(String forzaDiGravita) {
         this.forzaDiGravita = forzaDiGravita;
     }
 
@@ -87,11 +87,11 @@ public class dati {
         this.satellite = satellite;
     }
 
-    public double getDistSatellite() {
+    public String getDistSatellite() {
         return distSatellite;
     }
 
-    public void setDistSatellite(double distSatellite) {
+    public void setDistSatellite(String distSatellite) {
         this.distSatellite = distSatellite;
     }
 
@@ -118,16 +118,16 @@ public class dati {
     
     public dati() {
         this.nome = null;
-        this.dimensione = 0;
-        this.disanzaDalSole = 0;
+        this.dimensione = null;
+        this.disanzaDalSole = null;
         this.tipo = null;
-        this.massa = 0;
-        this.forzaDiGravita = 0;
+        this.massa = null;
+        this.forzaDiGravita = null;
         this.satellite = null;
         this.forma= null;
         this.selfRotazione=0;
         this.soleRotazione=0;
-        this.distSatellite=0;
+        this.distSatellite=null;
         
     }
 }

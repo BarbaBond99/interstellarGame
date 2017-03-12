@@ -37,7 +37,7 @@ public class enciclopedia  extends pianeta{
         boolean inserito=false;
         for(int i=0; i<10; i++){
             if(this.planet[i]==null&&inserito==false){
-              this.planet[i]=new pianeta(planeta);
+              this.planet[i]=planeta;
                inserito=true;
             }
     
@@ -53,18 +53,18 @@ public class enciclopedia  extends pianeta{
             if(this.planet[i]!=null){
                 if(this.planet[i].getNome()!=null)
                     s+=this.planet[i].getNome();
-                if(this.planet[i].getDimensione()!=0)
-                    s+="\n, Dimensione: "+this.planet[i].getDimensione();
-                if(this.planet[i].getMassa()!=0)
-                    s+="\n, Peso: "+this.planet[i].getMassa();
-                if(this.planet[i].getDisanzaDalSole()!=0)
-                    s+="\n, Distanza dal sole: "+this.planet[i].getDisanzaDalSole();
-                if(this.planet[i].getForzaDiGravita()!=0)
+               if(this.planet[i].getDimensione()!=null)
+                    s+="\nDimensione: "+this.planet[i].getDimensione();
+               if(this.planet[i].getMassa()!=null)
+                    s+="\nPeso: "+this.planet[i].getMassa();
+               if(this.planet[i].getDisanzaDalSole()!=null)
+                    s+="\nDistanza dal sole: "+this.planet[i].getDisanzaDalSole();
+                if(this.planet[i].getForzaDiGravita()!=null)
                     s+="\nForza di gravita: "+this.planet[i].getForzaDiGravita();
                 if(this.planet[i].getSatellite()!=null)
-                    s+="\n, Satellite: "+this.planet[i].getSatellite();
-                if(this.planet[i].getDistSatellite()!=0)
-                    s+="\n, Distanza satellite: "+this.planet[i].getDistSatellite();
+                    s+="\nSatellite: "+this.planet[i].getSatellite();
+                if(this.planet[i].getDistSatellite()!=null)
+                    s+="\nDistanza satellite: "+this.planet[i].getDistSatellite();
                 
                 return s;
             }
