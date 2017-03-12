@@ -36,7 +36,7 @@ public class Main{
         for(int i = 0; i < arr.length(); i++){
             arr.getDomanda(i).runDomanda();
         }
-        System.out.println("Eccellente, ricordati che tutto ciò che impari ti servirà in futuro,\n"
+        System.out.println("\nEccellente, ricordati che tutto ciò che impari ti servirà in futuro,\n"
                 + "Ecco a te un diario di viaggio in cui annotarti quel che sai e che scoprirai di ogni pianeta\n"
                 + "Ora ti faccio vedere cosa hai trovato fino ad ora:\n"
                 + "TERRA:\n"
@@ -44,7 +44,7 @@ public class Main{
                 + "2.Geoide\n"
                 + "3. Giorno 24 ore\n"
                 + "4. Anno 365 giorni\n"
-                + "5. Ha un solo satellite di nome LUNA\n");
+                + "5. Ha un solo satellite di nome LUNA");
         System.out.println("Sbloccati nuovi dati nel formulario\nMassa Terra = 5,9726 × 1024 kg,\nVolume Terra = 1,08321 × 1021 m³,\nAccelerazione di gravità terrestre = 9,8 m/s \n \nSbloccata Luna");
         System.out.println("Vuoi andare sulla luna?\n1.Si\n2.No");
         int k;
@@ -56,9 +56,20 @@ public class Main{
             else if(k==1)
                 System.out.println("Perfetto!\nArriverai tra qualche istante,\nanzi guarda sei gia' arrivato!!! \nBENVENUTO SULLA LUNA");
             else 
-                System.err.println("Mi disapice sei gia' in viaggio\nArriverai tra qualche istante,\nanzi guarda sei gia' arrivato (MUHAHAHAH)!!! \nBENVENUTO SULLA LUNA");
+                System.out.println("Mi disapice sei gia' in viaggio\nArriverai tra qualche istante,\nanzi guarda sei gia' arrivato (MUHAHAHAH)!!! \nBENVENUTO SULLA LUNA");
         }while(k!=1 && k!=2);
-        
+        indiceDomande arrLuna = new indiceDomande();
+        d = new Domanda("Sapendo che la massa della Luna è 1/80 della massa della Terra, che formula devo applicare per calcolare la massa della Luna", "1/80*MassaTerra", "80*MassaTerra", "MassaTerra+80Kg*2", "MassaTerra-80kg^2");
+        arrLuna.aggiungiDomanda(d);
+        d = new Domanda("Sapendo che il Volume della Luna è il 2%, qual'è la formula da applicare per calcolare il volume della Luna", "VolumeTerra*2/100", "VolumeTerra*100", "VolumeTerra*200", "VolumeTerra+2/100");
+        arrLuna.aggiungiDomanda(d);
+        d = new Domanda("Sapendo che la Forza di gravità della Luna è 1/6, qual'è la formula da usare per sapere quanto vale l'accelerazione di gravità della Luna?", "AccelerazionegravitàTerra/6", "AccelerazionegravitàTerra*6", "AccelerazionegravitàTerra+6", "AccelerazionegravitàTerra-6");
+        arrLuna.aggiungiDomanda(d);
+        for(int i = 0; i < arrLuna.length(); i++){
+            arrLuna.getDomanda(i).runDomanda();
+        }
+        System.out.println("Molto bene, ma siamo solo all'inizio,\n" +
+                            "Adesso proseguiamo in direzione Marte...");
         
         
     }
