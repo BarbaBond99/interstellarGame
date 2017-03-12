@@ -104,6 +104,13 @@ public class Domanda {
         else
             return false;
     }
+    
+    public boolean controllaSeVero(String k){
+        if(k.equals(""+(ordine+1)))
+            return true;
+        else
+            return false;
+    }
 
     @Override
     public String toString() {
@@ -141,11 +148,11 @@ public class Domanda {
     
     public void runDomanda(){
         System.out.println(this.toString());
-        int k;
+        String k;
         boolean y=false;
         Scanner keyboard = new Scanner(System.in);
         do{
-            k=keyboard.nextInt();
+            k=keyboard.nextLine();
             if(this.controllaSeVero(k)){
                 System.out.println("Corretto!!");
                 y=true;

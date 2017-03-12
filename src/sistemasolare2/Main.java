@@ -45,19 +45,19 @@ public class Main{
                 + "3. Giorno 24 ore\n"
                 + "4. Anno 365 giorni\n"
                 + "5. Ha un solo satellite di nome LUNA");
-        System.out.println("Sbloccati nuovi dati nel formulario\nMassa Terra = 5,9726 × 1024 kg,\nVolume Terra = 1,08321 × 1021 m³,\nAccelerazione di gravità terrestre = 9,8 m/s \n \nSbloccata Luna");
+        System.out.println("Sbloccati nuovi dati nel formulario\nMassa Terra = 5,9726 × 10^24 kg,\nVolume Terra = 1,08321 × 10^21 m³,\nAccelerazione di gravità terrestre = 9,8 m/s \n \nSbloccata Luna");
         System.out.println("Vuoi andare sulla luna?\n1.Si\n2.No");
-        int k;
+        String k;
         Scanner keyboard = new Scanner(System.in);
         do{
-            k=keyboard.nextInt();
-            if(k!=1 && k!=2)
+            k=keyboard.nextLine();
+            if(!k.equals("1") && !k.equals("2"))
                 System.out.println("Scelta non valida");
-            else if(k==1)
+            else if(k.equals("1"))
                 System.out.println("Perfetto!\nArriverai tra qualche istante,\nanzi guarda sei gia' arrivato!!! \nBENVENUTO SULLA LUNA");
             else 
                 System.out.println("Mi disapice sei gia' in viaggio\nArriverai tra qualche istante,\nanzi guarda sei gia' arrivato (MUHAHAHAH)!!! \nBENVENUTO SULLA LUNA");
-        }while(k!=1 && k!=2);
+        }while(!k.equals("1") && !k.equals("2"));
         indiceDomande arrLuna = new indiceDomande();
         d = new Domanda("Sapendo che la massa della Luna è 1/80 della massa della Terra, che formula devo applicare per calcolare la massa della Luna", "1/80*MassaTerra", "80*MassaTerra", "MassaTerra+80Kg*2", "MassaTerra-80kg^2");
         arrLuna.aggiungiDomanda(d);
@@ -67,6 +67,36 @@ public class Main{
         arrLuna.aggiungiDomanda(d);
         for(int i = 0; i < arrLuna.length(); i++){
             arrLuna.getDomanda(i).runDomanda();
+            k="";
+            switch(i){
+            case 0:
+                do{
+                    if(!k.equals(""))
+                        System.out.println("Sbaglaito riprova :(");
+                    else
+                        System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^18)");
+                    k = keyboard.nextLine();
+                }while(k.equals("746575"));
+                break;
+            case 1:
+                do{
+                    if(!k.equals(""))
+                        System.out.println("Sbaglaito riprova :(");
+                    else
+                        System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^11)");
+                    k = keyboard.nextLine();
+                }while(k.equals("2708025"));
+                break;
+            case 2:
+                do{
+                    if(!k.equals(""))
+                        System.out.println("Sbaglaito riprova :(");
+                    else
+                        System.out.println("Quanto vale? (sapendo che il numero sarà diviso per 10)");
+                    k = keyboard.nextLine();
+                }while(k.equals("16"));
+                break;
+            }
         }
         System.out.println("Molto bene, ma siamo solo all'inizio,\n" +
                             "Adesso proseguiamo in direzione Marte...");
