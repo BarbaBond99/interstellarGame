@@ -22,6 +22,10 @@ public class indiceDomande {
         dim++;
     }
     
+    public int length(){
+        return dim;
+    }
+    
     public Domanda getDomanda(int i){
         return new Domanda(Indice.get(i));
     }

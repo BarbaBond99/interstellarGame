@@ -5,8 +5,6 @@
  */
 package sistemasolare2;
 
-import sistemasolare2.pianeta;
-
 /**
  *
  * @author a.cacciapuoti
@@ -36,8 +34,25 @@ public class enciclopedia  extends pianeta{
     
     public void assegnaPianeta(pianeta planet[]){
         
+        boolean inserito=false;
+        for(int i=0; i<10; i++){
+            if(planet[i]==null&&inserito==false){
+               planet[i]=new pianeta(this);
+               inserito=true;
+            }
+    
+        }
+  
+    }
+     
+    public String toString(){
         
-        
+        for(int i=0;i<10;i++){
+            if(this.planet[i]!=null){
+                return (this.planet[i].getNome()+" Dimensione: "+this.planet[i].getDimensione()+", Peso: "+this.planet[i].getMassa()+", Distanza dal sole: "+this.planet[i].getDisanzaDalSole()+", Forza di gravita: "+this.planet[i].getForzaDiGravita()+", Satellite: "+this.planet[i].getSatellite()+", Distanza satellite: "+this.planet[i].getDistSatellite());
+            }
+        }
+        return null;
     }
     
 }

@@ -12,7 +12,8 @@ import java.io.FileNotFoundException;
  * @author a.cacciapuoti
  */
 public class pianeta extends dati{
-   private indiceDomande lista;
+  
+     private indiceDomande lista;
 
     public indiceDomande getLista() {
         return lista;
@@ -22,7 +23,22 @@ public class pianeta extends dati{
         this.lista = lista;
     }
 
-   
+    public pianeta() {
+        this.lista = lista;
+    }
+     
+   public pianeta(pianeta p){
+       this.setLista(p.getLista());
+       this.setDimensione(p.getDimensione());
+       this.setDisanzaDalSole(p.getDisanzaDalSole());
+       this.setDistSatellite(p.getDistSatellite());
+       this.setForzaDiGravita(p.getForzaDiGravita());
+       this.setMassa(p.getMassa());
+       this.setNome(p.getNome());
+       this.setSatellite(p.getSatellite());
+       this.setTipo(p.getTipo());
+       
+   }
   
     public static void main(String[] args) throws FileNotFoundException {
     

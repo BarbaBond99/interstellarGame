@@ -14,11 +14,21 @@ public class dati {
     private double dimensione;
     private double disanzaDalSole;
     private String tipo;
-    private double volume;
     private double massa;
     private double forzaDiGravita;
     private String satellite;
     private String distSatellite;
+    private String forma;
+    private int selfRotazione;
+    private int soleRotazione;
+
+    public String getForma() {
+        return forma;
+    }
+
+    public void setForma(String forma) {
+        this.forma = forma;
+    }
 
     public String getNome() {
         return nome;
@@ -53,15 +63,6 @@ public class dati {
     }
 
     
-
-    public double getVolume() {
-        return volume;
-    }
-
-    public void setVolume(double volume) {
-        this.volume = volume;
-    }
-
     public double getMassa() {
         return massa;
     }
@@ -95,15 +96,16 @@ public class dati {
     }
 
     public dati() {
-        this.nome = "NULL";
+        this.nome = "Bloccato";
         this.dimensione = 0;
         this.disanzaDalSole = 0;
-        this.tipo = "NULL";
-        this.volume = 0;
+        this.tipo = "Bloccato";
         this.massa = 0;
         this.forzaDiGravita = 0;
-        this.satellite = "NULL";
+        this.satellite = "Bloccato";
+        this.forma="Bloccato";
+        this.selfRotazione=0;
+        this.soleRotazione=0;
+        
     }
-    
-    
 }

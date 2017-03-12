@@ -33,7 +33,9 @@ public class Main{
         arr.aggiungiDomanda(d);
         d = new Domanda("Come si chiama?", "Luna", "Sole", "Mercurio", "Terra2");
         arr.aggiungiDomanda(d);
-        //for(int i = 0; i < arr.)
+        for(int i = 0; i < arr.length(); i++){
+            arr.getDomanda(i).runDomanda();
+        }
         System.out.println("Eccellente, ricordati che tutto ciò che impari ti servirà in futuro,\n"
                 + "Ecco a te un diario di viaggio in cui annotarti quel che sai e che scoprirai di ogni pianeta\n"
                 + "Ora ti faccio vedere cosa hai trovato fino ad ora:\n"
