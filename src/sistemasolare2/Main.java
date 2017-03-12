@@ -76,7 +76,7 @@ public class Main{
                     else
                         System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^18)");
                     k = keyboard.nextLine();
-                }while(k.equals("746575"));
+                }while(!k.equals("746575"));
                 break;
             case 1:
                 do{
@@ -85,7 +85,7 @@ public class Main{
                     else
                         System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^11)");
                     k = keyboard.nextLine();
-                }while(k.equals("2708025"));
+                }while(!k.equals("2708025"));
                 break;
             case 2:
                 do{
@@ -94,7 +94,7 @@ public class Main{
                     else
                         System.out.println("Quanto vale? (sapendo che il numero sarà diviso per 10)");
                     k = keyboard.nextLine();
-                }while(k.equals("16"));
+                }while(!k.equals("16"));
                 break;
             }
         }
