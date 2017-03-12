@@ -24,6 +24,7 @@ public class pianeta extends dati{
     }
 
     public pianeta() {
+        super();
         this.lista = lista;
     }
      
@@ -31,13 +32,14 @@ public class pianeta extends dati{
        this.setLista(p.getLista());
        this.setDimensione(p.getDimensione());
        this.setDisanzaDalSole(p.getDisanzaDalSole());
-       this.setDistSatellite(p.getDistSatellite());
        this.setForzaDiGravita(p.getForzaDiGravita());
        this.setMassa(p.getMassa());
        this.setNome(p.getNome());
        this.setSatellite(p.getSatellite());
        this.setTipo(p.getTipo());
-       
+       this.setSelfRotazione(p.getSelfRotazione());
+       this.setSoleRotazione(p.getSoleRotazione());
+       this.setDistSatellite(p.getDistSatellite());
    }
   
     public static void main(String[] args) throws FileNotFoundException {

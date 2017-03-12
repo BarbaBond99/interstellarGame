@@ -13,7 +13,7 @@ import java.util.Random;
 import java.util.Scanner;
 /**
  *
- * @author a.cacciapuoti
+ * @author Enrico Falco
  */
 public class Domanda {
     private String testo;
@@ -104,13 +104,6 @@ public class Domanda {
         else
             return false;
     }
-    
-    public boolean controllaSeVero(String k){
-        if(k.equals(""+(ordine+1)))
-            return true;
-        else
-            return false;
-    }
 
     @Override
     public String toString() {
@@ -148,11 +141,11 @@ public class Domanda {
     
     public void runDomanda(){
         System.out.println(this.toString());
-        String k;
+        int k;
         boolean y=false;
         Scanner keyboard = new Scanner(System.in);
         do{
-            k=keyboard.nextLine();
+            k=keyboard.nextInt();
             if(this.controllaSeVero(k)){
                 System.out.println("Corretto!!");
                 y=true;

@@ -32,12 +32,12 @@ public class enciclopedia  extends pianeta{
         System.out.println("\n"); 
     } 
     
-    public void assegnaPianeta(pianeta planet[]){
+    public void assegnaPianeta(pianeta planeta){
         
         boolean inserito=false;
         for(int i=0; i<10; i++){
-            if(planet[i]==null&&inserito==false){
-               planet[i]=new pianeta(this);
+            if(this.planet[i]==null&&inserito==false){
+              this.planet[i]=new pianeta(planeta);
                inserito=true;
             }
     
@@ -47,9 +47,26 @@ public class enciclopedia  extends pianeta{
      
     public String toString(){
         
+        String s="";
+        
         for(int i=0;i<10;i++){
             if(this.planet[i]!=null){
-                return (this.planet[i].getNome()+" Dimensione: "+this.planet[i].getDimensione()+", Peso: "+this.planet[i].getMassa()+", Distanza dal sole: "+this.planet[i].getDisanzaDalSole()+", Forza di gravita: "+this.planet[i].getForzaDiGravita()+", Satellite: "+this.planet[i].getSatellite()+", Distanza satellite: "+this.planet[i].getDistSatellite());
+                if(this.planet[i].getNome()!=null)
+                    s+=this.planet[i].getNome();
+                if(this.planet[i].getDimensione()!=0)
+                    s+="\n, Dimensione: "+this.planet[i].getDimensione();
+                if(this.planet[i].getMassa()!=0)
+                    s+="\n, Peso: "+this.planet[i].getMassa();
+                if(this.planet[i].getDisanzaDalSole()!=0)
+                    s+="\n, Distanza dal sole: "+this.planet[i].getDisanzaDalSole();
+                if(this.planet[i].getForzaDiGravita()!=0)
+                    s+="\nForza di gravita: "+this.planet[i].getForzaDiGravita();
+                if(this.planet[i].getSatellite()!=null)
+                    s+="\n, Satellite: "+this.planet[i].getSatellite();
+                if(this.planet[i].getDistSatellite()!=0)
+                    s+="\n, Distanza satellite: "+this.planet[i].getDistSatellite();
+                
+                return s;
             }
         }
         return null;

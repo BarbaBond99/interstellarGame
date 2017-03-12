@@ -17,7 +17,7 @@ public class dati {
     private double massa;
     private double forzaDiGravita;
     private String satellite;
-    private String distSatellite;
+    private double distSatellite;
     private String forma;
     private int selfRotazione;
     private int soleRotazione;
@@ -87,25 +87,47 @@ public class dati {
         this.satellite = satellite;
     }
 
-    public String getDistSatellite() {
+    public double getDistSatellite() {
         return distSatellite;
     }
 
-    public void setDistSatellite(String distSatellite) {
+    public void setDistSatellite(double distSatellite) {
         this.distSatellite = distSatellite;
     }
 
+   
+    
+
+    public int getSelfRotazione() {
+        return selfRotazione;
+    }
+
+    public void setSelfRotazione(int selfRotazione) {
+        this.selfRotazione = selfRotazione;
+    }
+
+    public int getSoleRotazione() {
+        return soleRotazione;
+    }
+
+    public void setSoleRotazione(int soleRotazione) {
+        this.soleRotazione = soleRotazione;
+    }
+
+    
+    
     public dati() {
-        this.nome = "Bloccato";
+        this.nome = null;
         this.dimensione = 0;
         this.disanzaDalSole = 0;
-        this.tipo = "Bloccato";
+        this.tipo = null;
         this.massa = 0;
         this.forzaDiGravita = 0;
-        this.satellite = "Bloccato";
-        this.forma="Bloccato";
+        this.satellite = null;
+        this.forma= null;
         this.selfRotazione=0;
         this.soleRotazione=0;
+        this.distSatellite=0;
         
     }
 }

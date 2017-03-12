@@ -11,53 +11,67 @@ import java.util.Scanner;
  *
  * @author Enrico Falco
  */
+public class Main {
 
-public class Main{
-    
-    public static void main(String[] args){
-        System.out.println("Benvenuto in questo viaggio interstellare\n" +
-                            "Sei pronto a viaggiare per il sistema solare\n" +
-                            "Ed ad ampliare le tue conoscenze su ciò che ci circonda?\n" +
-                            "Bene! Iniziamo, Ora ti trovi ancora sul tuo pianeta, la Terra\n" +
-                            "Per cominciare una nuova avventura rispondi ad alcune semplici domande sulla Terra \n");
-        indiceDomande arr=new indiceDomande();
+    public static void main(String[] args) {
+        pianeta planet = new pianeta();
+        enciclopedia treccani = new enciclopedia();
+
+        System.out.println("PROGETTO SISTEMA SOLARE\n Benvenuto in questo viaggio interstellare\n"
+                + "Sei pronto a viaggiare per il sistema solare\n"
+                + "Ed ad ampliare le tue conoscenze su ciò che ci circonda?\n"
+                + "Bene! Iniziamo, Ora ti trovi ancora sul tuo pianeta, la Terra\n"
+                + "Per cominciare una nuova avventura rispondi ad alcune semplici domande sulla Terra \n");
+        indiceDomande arr = new indiceDomande();
         Domanda d = new Domanda("C'è vita sulla Terra?", "Si", "No", "Gli scienziati non ne sono sicuri", "Solo in alcuni periodi dell'anno");
         arr.aggiungiDomanda(d);
+        planet.setNome("Terra");
         d = new Domanda("Qual'è la VERA forma della Terra?", "Geoide", "Sfera", "Palla", "Cubo");
         arr.aggiungiDomanda(d);
+        planet.setForma("Geoide");
         d = new Domanda("Quanto tempo impiega la Terra per compiere un giro attorno a se stessa?", "24 Ore", "365 Giorni", "24 Mesi", "12 Ore");
         arr.aggiungiDomanda(d);
+        planet.setSelfRotazione(24);
         d = new Domanda("Quanto tempo impiega la Terra per compiere un giro attorno al Sole?", "365 Giorni", "24 Ore", "24 Mesi", "12 Ore");
         arr.aggiungiDomanda(d);
+        planet.setSoleRotazione(365);
         d = new Domanda("Quanti satelliti naturali ha la Terra", "1", "0", "2", "7");
         arr.aggiungiDomanda(d);
         d = new Domanda("Come si chiama?", "Luna", "Sole", "Mercurio", "Terra2");
         arr.aggiungiDomanda(d);
-        for(int i = 0; i < arr.length(); i++){
+        planet.setSatellite("Luna");
+        for (int i = 0; i < arr.length(); i++) {
             arr.getDomanda(i).runDomanda();
         }
-        System.out.println("\nEccellente, ricordati che tutto ciò che impari ti servirà in futuro,\n"
-                + "Ecco a te un diario di viaggio in cui annotarti quel che sai e che scoprirai di ogni pianeta\n"
-                + "Ora ti faccio vedere cosa hai trovato fino ad ora:\n"
-                + "TERRA:\n"
-                + "1. C'è la vita\n"
-                + "2.Geoide\n"
-                + "3. Giorno 24 ore\n"
-                + "4. Anno 365 giorni\n"
-                + "5. Ha un solo satellite di nome LUNA");
+        treccani.assegnaPianeta(planet);
+        System.out.println(treccani.toString());
+//        System.out.println("Eccellente, ricordati che tutto ciò che impari ti servirà in futuro,\n"
+//                + "Ecco a te un diario di viaggio in cui annotarti quel che sai e che scoprirai di ogni pianeta\n"
+//                + "Ora ti faccio vedere cosa hai trovato fino ad ora:\n"
+//                + "TERRA:\n"
+//                + "1. C'è la vita\n"
+//                + "2.Geoide\n"
+//                + "3. Giorno 24 ore\n"
+//                + "4. Anno 365 giorni\n"
+//                + "5. Ha un solo satellite di nome LUNA\n");
+
         System.out.println("Sbloccati nuovi dati nel formulario\nMassa Terra = 5,9726 × 10^24 kg,\nVolume Terra = 1,08321 × 10^21 m³,\nAccelerazione di gravità terrestre = 9,8 m/s \n \nSbloccata Luna");
+        planet.setForzaDiGravita(9.8);
+        planet.setMassa(5.9726 * 1024);
+        planet.setDimensione(1.08321 * 1021);
         System.out.println("Vuoi andare sulla luna?\n1.Si\n2.No");
         String k;
         Scanner keyboard = new Scanner(System.in);
-        do{
-            k=keyboard.nextLine();
-            if(!k.equals("1") && !k.equals("2"))
+        do {
+            k = keyboard.nextLine();
+            if (!k.equals("1") && !k.equals("2")) {
                 System.out.println("Scelta non valida");
-            else if(k.equals("1"))
+            } else if (k.equals("1")) {
                 System.out.println("Perfetto!\nArriverai tra qualche istante,\nanzi guarda sei gia' arrivato!!! \nBENVENUTO SULLA LUNA");
-            else 
+            } else {
                 System.out.println("Mi disapice sei gia' in viaggio\nArriverai tra qualche istante,\nanzi guarda sei gia' arrivato (MUHAHAHAH)!!! \nBENVENUTO SULLA LUNA");
-        }while(!k.equals("1") && !k.equals("2"));
+            }
+        } while (!k.equals("1") && !k.equals("2"));
         indiceDomande arrLuna = new indiceDomande();
         d = new Domanda("Sapendo che la massa della Luna è 1/80 della massa della Terra, che formula devo applicare per calcolare la massa della Luna", "1/80*MassaTerra", "80*MassaTerra", "MassaTerra+80Kg*2", "MassaTerra-80kg^2");
         arrLuna.aggiungiDomanda(d);
@@ -98,9 +112,13 @@ public class Main{
                 break;
             }
         }
-        System.out.println("Molto bene, ma siamo solo all'inizio,\n" +
-                            "Adesso proseguiamo in direzione Marte...");
-        
-        
+        System.out.println("Molto bene, ma siamo solo all'inizio,\n"
+                + "Adesso proseguiamo in direzione Marte...");
+
     }
+
 }
+
+        
+   
+
