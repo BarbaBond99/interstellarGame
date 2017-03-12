@@ -138,6 +138,24 @@ public class Domanda {
         
         return "Domanda: " + testo + "\n" + tmp;
     }
+    
+    public void runDomanda(){
+        System.out.println(this.toString());
+        int k;
+        boolean y=false;
+        Scanner keyboard = new Scanner(System.in);
+        do{
+            k=keyboard.nextInt();
+            if(this.controllaSeVero(k)){
+                System.out.println("Corretto!!");
+                y=true;
+            }
+            else{
+                System.out.println("Riprova :(");
+            }
+        }while(!y);
+    }
+    
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) throws FileNotFoundException {
      
