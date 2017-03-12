@@ -33,6 +33,16 @@ public class Main{
         arr.aggiungiDomanda(d);
         d = new Domanda("Come si chiama?", "Luna", "Sole", "Mercurio", "Terra2");
         arr.aggiungiDomanda(d);
+        //for(int i = 0; i < arr.)
+        System.out.println("Eccellente, ricordati che tutto ciò che impari ti servirà in futuro,\n"
+                + "Ecco a te un diario di viaggio in cui annotarti quel che sai e che scoprirai di ogni pianeta\n"
+                + "Ora ti faccio vedere cosa hai trovato fino ad ora:\n"
+                + "TERRA:\n"
+                + "1. C'è la vita\n"
+                + "2.Geoide\n"
+                + "3. Giorno 24 ore\n"
+                + "4. Anno 365 giorni\n"
+                + "5. Ha un solo satellite di nome LUNA\n");
         System.out.println("Sbloccati nuovi dati nel formulario\nMassa Terra = 5,9726 × 1024 kg,\nVolume Terra = 1,08321 × 1021 m³,\nAccelerazione di gravità terrestre = 9,8 m/s \n \nSbloccata Luna");
         System.out.println("Vuoi andare sulla luna?\n1.Si\n2.No");
         int k;
