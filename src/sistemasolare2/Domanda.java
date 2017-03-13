@@ -139,7 +139,7 @@ public class Domanda {
         return "Domanda: " + testo + "\n" + tmp;
     }
     
-    public void runDomanda(){
+    public void runDomanda() throws InterruptedException{
         System.out.println(this.toString());
         int k;
         boolean y=false;
@@ -147,13 +147,15 @@ public class Domanda {
         do{
             k=keyboard.nextInt();
             if(this.controllaSeVero(k)){
-                System.out.println("Corretto!!");
+                System.out.println("Corretto");
                 y=true;
             }
             else{
-                System.out.println("Riprova :(");
+                System.out.println("Sbagliato");
             }
         }while(!y);
+        
+                Thread.sleep(1000);
     }
     
     @SuppressWarnings("empty-statement")
@@ -167,11 +169,11 @@ public class Domanda {
         do{
             k=keyboard.nextInt();
             if(d.controllaSeVero(k)){
-                System.out.println("Corretto!!");
+                System.out.println("Corretto");
                 y=true;
             }
             else{
-                System.out.println("Riprova :(");
+                System.out.println("Sbagliato");
             }
         }while(!y);
     }

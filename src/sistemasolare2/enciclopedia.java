@@ -5,6 +5,8 @@
  */
 package sistemasolare2;
 
+import java.io.FileNotFoundException;
+
 /**
  *
  * @author a.cacciapuoti
@@ -22,7 +24,7 @@ public class enciclopedia  extends pianeta{
     }
 
 
-    public enciclopedia() {
+    public enciclopedia() throws FileNotFoundException{
         this.planet = new pianeta[10];
     }
     

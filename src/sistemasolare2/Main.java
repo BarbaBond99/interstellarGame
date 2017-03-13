@@ -14,16 +14,20 @@ import java.util.Scanner;
  */
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, InterruptedException {
         pianeta Terra = new pianeta();
         enciclopedia treccani = new enciclopedia();
 
-        System.out.println("PROGETTO SISTEMA SOLARE\n Benvenuto in questo viaggio interstellare\n"
+        System.out.println("PROGETTO SISTEMA SOLARE\nBenvenuto in questo viaggio interstellare\n"
                 + "Sei pronto a viaggiare per il sistema solare\n"
                 + "Ed ad ampliare le tue conoscenze su ciò che ci circonda?\n"
                 + "Bene! Iniziamo, Ora ti trovi ancora sul tuo pianeta, la Terra\n"
                 + "Per cominciare una nuova avventura rispondi ad alcune semplici domande sulla Terra \n");
+        
+        Thread.sleep(4000);
+        Terra.setNome("Terra");
         Domanda d;
+        
         /*indiceDomande arr = new indiceDomande();
         Domanda d = new Domanda("C'è vita sulla Terra?", "Si", "No", "Gli scienziati non ne sono sicuri", "Solo in alcuni periodi dell'anno");
         arr.aggiungiDomanda(d);
@@ -40,7 +44,7 @@ public class Main {
         for (int i = 0; i < Terra.getLista().length(); i++) {
             Terra.getLista().getDomanda(i).runDomanda();                
         }
-        Terra.setNome("Terra");
+       
         Terra.setSatellite(Terra.getLista().getDomanda(Terra.getLista().length()-1).getRispostaVera());
         treccani.assegnaPianeta(Terra);
         System.out.println(treccani.toString());
@@ -54,7 +58,7 @@ public class Main {
 //                + "4. Anno 365 giorni\n"
 //                + "5. Ha un solo satellite di nome LUNA\n");
 
-        System.out.println("Sbloccati nuovi dati nel formulario\nMassa Terra = 5,9726 × 10^24 kg,\nVolume Terra = 1,08321 × 10^21 m³,\nAccelerazione di gravità terrestre = 9,8 m/s \n \nSbloccata Luna");
+        System.out.println("[Sbloccati nuovi dati nel formulario\nMassa Terra = 5,9726 × 10^24 kg,\nVolume Terra = 1,08321 × 10^21 m³,\nAccelerazione di gravità terrestre = 9,8 m/s] \n \n[Sbloccata Luna]");
         Terra.setForzaDiGravita("9.8");
         Terra.setMassa("5,9726 * 10^24");
         Terra.setDimensione("1,08321 * 10^21");
@@ -66,7 +70,11 @@ public class Main {
             if (!k.equals("1") && !k.equals("2")) {
                 System.out.println("Scelta non valida");
             } else if (k.equals("1")) {
-                System.out.println("Perfetto!\nArriverai tra qualche istante,\nanzi guarda sei gia' arrivato!!! \nBENVENUTO SULLA LUNA");
+                System.out.println("Stai viaggiando verso la luna...\nè un viaggio lungo, ci vorrà un po di tempo... \n");
+                
+                Thread.sleep(5000);
+                  
+                    System.out.println("Ecco, stai approcciando la luna\n");
             } else {
                 System.out.println("Mi disapice sei gia' in viaggio\nArriverai tra qualche istante,\nanzi guarda sei gia' arrivato (MUHAHAHAH)!!! \nBENVENUTO SULLA LUNA");
             }
@@ -89,11 +97,12 @@ public class Main {
                     else if(k.equals("risp"))
                         System.out.println("746575");
                     else if(!k.equals(""))
-                        System.out.println("Sbaglaito riprova :(");
+                        System.out.println("Sagliato");
                     else
                         System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^18)\nPer guardare l'enciclopedia digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("746575"));
+                System.out.println("corretto");
                 break;
             case 1:
                 do{
@@ -102,11 +111,12 @@ public class Main {
                     else if(k.equals("risp"))
                         System.out.println("2708025");
                     else if(!k.equals(""))
-                        System.out.println("Sbaglaito riprova :(");
+                        System.out.println("Sbagliato");
                     else
                         System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^11)\nPer guardare l'enciclopedia digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("2708025"));
+                System.out.println("Corretto");
                 break;
             case 2:
                 do{
@@ -115,17 +125,26 @@ public class Main {
                     else if(k.equals("risp"))
                         System.out.println("16");
                     else if(!k.equals(""))
-                        System.out.println("Sbaglaito riprova :(");
+                        System.out.println("Sbaglaito");
                     else
                         System.out.println("Quanto vale? (sapendo che il numero sarà diviso per 10)\nPer guardare l'enciclopedia digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("16"));
+                System.out.println("Corretto");
                 break;
             }
         }
         System.out.println("Molto bene, ma siamo solo all'inizio,\n"
-                + "Adesso proseguiamo in direzione Marte...");
-
+                + "Adesso puoi proseguire la tua esplorazione per altri pianeti...");
+        
+        int c=0;
+        while(c!=1){
+        System.out.println("press 1 to exit");
+        c = keyboard.nextInt();
+        
+        }
+        Runtime.getRuntime().exit(0);
+ 
     }
 
 }
