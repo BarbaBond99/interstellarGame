@@ -48,6 +48,7 @@ public class Main {
         Terra.setSatellite(Terra.getLista().getDomanda(Terra.getLista().length()-1).getRispostaVera());
         treccani.assegnaPianeta(Terra);
         System.out.println(treccani.toString());
+        Thread.sleep(1000);
 //        System.out.println("Eccellente, ricordati che tutto ciò che impari ti servirà in futuro,\n"
 //                + "Ecco a te un diario di viaggio in cui annotarti quel che sai e che scoprirai di ogni pianeta\n"
 //                + "Ora ti faccio vedere cosa hai trovato fino ad ora:\n"
@@ -58,10 +59,12 @@ public class Main {
 //                + "4. Anno 365 giorni\n"
 //                + "5. Ha un solo satellite di nome LUNA\n");
 
-        System.out.println("[Sbloccati nuovi dati nel formulario\nMassa Terra = 5,9726 × 10^24 kg,\nVolume Terra = 1,08321 × 10^21 m³,\nAccelerazione di gravità terrestre = 9,8 m/s] \n \n[Sbloccata Luna]");
+        System.out.println("[Sbloccati nuovi dati nel formulario\nMassa Terra = 5,9726 × 10^24 kg,\nVolume Terra = 1,08321 × 10^21 m³,\nAccelerazione di gravità terrestre = 9,8 m/s]\n");
         Terra.setForzaDiGravita("9.8");
         Terra.setMassa("5,9726 * 10^24");
         Terra.setDimensione("1,08321 * 10^21");
+        Thread.sleep(2000);
+        System.out.println("[Sbloccata Luna]");
         System.out.println("Vuoi andare sulla luna?\n1.Si\n2.No");
         String k;
         Scanner keyboard = new Scanner(System.in);
@@ -70,13 +73,14 @@ public class Main {
             if (!k.equals("1") && !k.equals("2")) {
                 System.out.println("Scelta non valida");
             } else if (k.equals("1")) {
-                System.out.println("Stai viaggiando verso la luna...\nè un viaggio lungo, ci vorrà un po di tempo... \n");
-                
+                System.out.println("Stai viaggiando verso la luna...\nè un viaggio lungo, ci vorrà un po di tempo... \n");                
                 Thread.sleep(5000);
-                  
-                    System.out.println("Ecco, stai approcciando la luna\n");
-            } else {
+                System.out.println("Ecco, stai approcciando la luna\n");
+                Thread.sleep(2000);
+            } 
+            else {
                 System.out.println("Mi disapice sei gia' in viaggio\nArriverai tra qualche istante,\nanzi guarda sei gia' arrivato (MUHAHAHAH)!!! \nBENVENUTO SULLA LUNA");
+                Thread.sleep(4000);
             }
         } while (!k.equals("1") && !k.equals("2"));
         indiceDomande arrLuna = new indiceDomande();
