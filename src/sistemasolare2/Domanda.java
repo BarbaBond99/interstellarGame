@@ -183,7 +183,5 @@ public class Domanda {
                 System.out.println("Sbagliato");
             }
         }while(!y);
-    }*/
-    
-    
+    }*/   
 }

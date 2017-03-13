@@ -140,15 +140,11 @@ public class Main {
         }
         System.out.println("Molto bene, ma siamo solo all'inizio,\n"
                 + "Adesso puoi proseguire la tua esplorazione per altri pianeti...");
-        
         int c=0;
         while(c!=1){
         System.out.println("press 1 to exit");
         c = keyboard.nextInt();
-        
         }
         Runtime.getRuntime().exit(0);
- 
     }
-
 }
