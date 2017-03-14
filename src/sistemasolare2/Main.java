@@ -101,12 +101,12 @@ public class Main {
                     else if(k.equals("risp"))
                         System.out.println("746575");
                     else if(!k.equals(""))
-                        System.out.println("Sagliato");
+                        System.out.println("Sagliato :(\nRiprova: ");
                     else
                         System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^18)\nPer guardare l'enciclopedia digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("746575"));
-                System.out.println("corretto");
+                System.out.println("Corretto :)");
                 break;
             case 1:
                 do{
@@ -115,12 +115,12 @@ public class Main {
                     else if(k.equals("risp"))
                         System.out.println("2708025");
                     else if(!k.equals(""))
-                        System.out.println("Sbagliato");
+                        System.out.println("Sagliato :(\nRiprova: ");
                     else
                         System.out.println("Quanto vale? (sapendo che il numero sarà moltiplicato per 10^11)\nPer guardare l'enciclopedia digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("2708025"));
-                System.out.println("Corretto");
+                System.out.println("Corretto :)");
                 break;
             case 2:
                 do{
@@ -129,12 +129,12 @@ public class Main {
                     else if(k.equals("risp"))
                         System.out.println("16");
                     else if(!k.equals(""))
-                        System.out.println("Sbaglaito");
+                        System.out.println("Sagliato :(\nRiprova: ");
                     else
                         System.out.println("Quanto vale? (sapendo che il numero sarà diviso per 10)\nPer guardare l'enciclopedia digita help");
                     k = keyboard.nextLine();
                 }while(!k.equals("16"));
-                System.out.println("Corretto");
+                System.out.println("Corretto :)");
                 break;
             }
         }

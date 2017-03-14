@@ -154,11 +154,11 @@ public class Domanda {
         do{
             k=keyboard.nextLine();
             if(this.controllaSeVero(k)){
-                System.out.println("Corretto");
+                System.out.println("Corretto :)");
                 y=true;
             }
             else{
-                System.out.println("Sbagliato");
+                System.out.println("Sagliato :(\nRiprova:");
             }
         }while(!y);
         
