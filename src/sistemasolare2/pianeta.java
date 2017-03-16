@@ -14,7 +14,7 @@ import java.util.Scanner;
  *
  * @author a.cacciapuoti
  */
-public class pianeta extends dati{
+public class pianeta extends CorpoAstronomico{
   
      private indiceDomande lista;
 

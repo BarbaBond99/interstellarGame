@@ -93,10 +93,6 @@ public class Domanda {
         ordine = d.ordine;
     }
     
-    public void caricaDomanda() throws FileNotFoundException{
-       
-        
-    }
          
     public boolean controllaSeVero(int k){
         if(k==(ordine+1))

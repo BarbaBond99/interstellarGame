@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
  *
  * @author a.cacciapuoti
  */
-public class enciclopedia  extends pianeta{
+public class enciclopedia{
     
     private pianeta []planet;
 

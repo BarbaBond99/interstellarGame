@@ -9,7 +9,7 @@ package sistemasolare2;
  *
  * @author a.cacciapuoti
  */
-public class dati {
+public class CorpoAstronomico {
     private String nome;
     private String dimensione;
     private String disanzaDalSole;
@@ -116,7 +116,7 @@ public class dati {
 
     
     
-    public dati() {
+    public CorpoAstronomico() {
         this.nome = null;
         this.dimensione = null;
         this.disanzaDalSole = null;
