@@ -1,0 +1,13 @@
+"Sbloccata Terra"
+"C'è vita sulla Terra?"; "Si"; "No"; "Gli scienziati non ne sono sicuri"; "Solo in alcuni periodi dell'anno";
+"Qual'è la VERA forma della Terra?"; "Geoide"; "Sfera"; "Palla"; "Cubo";
+"Quanto tempo impiega la Terra per compiere un giro attorno a se stessa?"; "24 Ore"; "365 Giorni"; "24 Mesi"; "12 Ore";
+"Quanto tempo impiega la Terra per compiere un giro attorno al Sole?"; "365 Giorni"; "24 Ore"; "24 Mesi"; "12 Ore";
+"Quanti satelliti naturali ha la Terra"; "1"; "0"; "2"; "7";
+"Come si chiama?"; "Luna"; "Sole"; "Mercurio"; "Terra2"
+//Come alternativa per trovare il nome sarebbe carino far partire l'impiccato
+"Sbloccati nuovi dati nel formulario (Massa Terra = 5,9726 × 1024 kg), (Volume Terra = 1,08321 × 1021 m³), (accelerazione di gravità terrestre = 9,8 m/s)"
+"Sbloccata Luna"
+"Sapendo che la massa della Luna è 1/80 della massa della Terra, che formula devo applicare per calcolare la massa della Luna"; "1/80*MassaTerra"; "80*MassaTerra"; "MassaTerra+80Kg*2"; "MassaTerra-80kg^2";
+"Sapendo che il Volume della Luna è il 2%, qual'è la formula da applicare per calcolare il volume della Luna"; "VolumeTerra*2/100"; "VolumeTerra*100"; "VolumeTerra*200"; VolumeTerra+2/100";
+"Sapendo che la Forza di gravità della Luna è 1/6, qual'è la formula da usare per sapere quanto vale l'accelerazione di gravità della Luna?"; "AccelerazionegravitàTerra/6"; "AccelerazionegravitàTerra*6"; "AccelerazionegravitàTerra+6"; "AccelerazionegravitàTerra-6";
