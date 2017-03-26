@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="sistemasolare2">
+  <ClassDiagramComponents>
+    <Class name="dati" package="sistemasolare2" visibility="public" xPosition="898.0" yPosition="85.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="dimensione" type="String" visibility="private"/>
+        <Field name="disanzaDalSole" type="String" visibility="private"/>
+        <Field name="tipo" type="String" visibility="private"/>
+        <Field name="massa" type="String" visibility="private"/>
+        <Field name="forzaDiGravita" type="String" visibility="private"/>
+        <Field name="satellite" type="String" visibility="private"/>
+        <Field name="distSatellite" type="String" visibility="private"/>
+        <Field name="forma" type="String" visibility="private"/>
+        <Field name="selfRotazione" type="int" visibility="private"/>
+        <Field name="soleRotazione" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Domanda" package="sistemasolare2" visibility="public" xPosition="30.0" yPosition="326.0">
+      <Fields>
+        <Field name="testo" type="String" visibility="private"/>
+        <Field name="rispostaVera" type="String" visibility="private"/>
+        <Field name="risposta1" type="String" visibility="private"/>
+        <Field name="risposta2" type="String" visibility="private"/>
+        <Field name="risposta3" type="String" visibility="private"/>
+        <Field name="ordine" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="testo"/>
+          <Argument type="String" name="rispostaVera"/>
+          <Argument type="String" name="risposta1"/>
+          <Argument type="String" name="risposta2"/>
+          <Argument type="String" name="risposta3"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Domanda" name="d"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTesto" returnType="String" visibility="public"/>
+        <Method name="caricaDomanda" returnType="void" visibility="public"/>
+        <Method name="controllaSeVero" returnType="boolean" visibility="public">
+          <Argument type="int" name="k"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="runDomanda" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="enciclopedia" package="sistemasolare2" visibility="public" xPosition="690.0" yPosition="577.0">
+      <Fields>
+        <Field name="planet" type="pianeta[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getPlanet" returnType="pianeta[]" visibility="public"/>
+        <Method name="pulisciSchermo" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="assegnaPianeta" returnType="void" visibility="public">
+          <Argument type="pianeta" name="planeta"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="indiceDomande" package="sistemasolare2" visibility="public" xPosition="455.0" yPosition="16.0">
+      <Fields>
+        <Field name="Indice" type="ArrayList&lt;Domanda&gt;" visibility="private" isFinal="true"/>
+        <Field name="dim" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIndice" returnType="ArrayList&lt;Domanda&gt;" visibility="public"/>
+        <Method name="aggiungiDomanda" returnType="void" visibility="public">
+          <Argument type="Domanda" name="d"/>
+        </Method>
+        <Method name="length" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="pianeta" package="sistemasolare2" visibility="public" xPosition="626.0" yPosition="292.0">
+      <Fields>
+        <Field name="lista" type="indiceDomande" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="pianeta" name="p"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLista" returnType="indiceDomande" visibility="public"/>
+        <Method name="caricaDomande" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="sistemasolare2.enciclopedia" target="sistemasolare2.pianeta"/>
+    <HasRelation name="Has" source="sistemasolare2.indiceDomande" target="sistemasolare2.Domanda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Domanda&gt;"/>
+    <UseRelation name="" source="sistemasolare2.indiceDomande" target="sistemasolare2.Domanda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="sistemasolare2.enciclopedia" target="sistemasolare2.pianeta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Has" source="sistemasolare2.pianeta" target="sistemasolare2.indiceDomande" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="sistemasolare2.pianeta" target="sistemasolare2.indiceDomande" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="sistemasolare2.pianeta" target="sistemasolare2.dati"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
